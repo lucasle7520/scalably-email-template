@@ -1,0 +1,363 @@
+<!-- Add Google Fonts Poppins import and apply font-family -->
+<link
+  href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,600&display=swap"
+  rel="stylesheet"
+/>
+<div
+  style="
+    padding: 40px 16px;
+    background: url(&quot;https://s3.ap-northeast-1.amazonaws.com/test-membership.scalably.com/scalably-membership-svc/development/user/email-bg-4ff71950d8360b7abc38cca5aee40e0e.png&quot;)
+      center center / cover no-repeat;
+    font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+  "
+>
+  <!-- Main card -->
+  <div
+    style="
+      background: rgba(255, 255, 255, 0.95);
+      margin: 0 auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      max-width: 480px;
+      padding: 40px 32px 32px 32px;
+      margin-top: 40px;
+      font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+    "
+  >
+    <!-- Title -->
+    <div
+      style="
+        width: 100%;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <h2
+        style="
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #1a1a1a;
+          margin: 0 0 24px 0;
+          text-align: center;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        @{BuyerScalablyID} 様が登録を再開しました
+      </h2>
+    </div>
+    <!-- Email body -->
+    <div
+      style="
+        border-radius: 12px;
+        margin-bottom: 24px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 16px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        @{ScalablyID} 様
+      </div>
+      <p
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 24px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        貴本コミュニティのメンバー様が、サブスクリプションを正常に再開されましたのでお知らせいたします。
+      </p>
+
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 12px;
+          font-weight: 600;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        サブスクリプション再開の詳細：
+      </div>
+      <div
+        style="
+          width: 100%;
+          border-radius: 12px;
+          background: #fff;
+          box-shadow: 0 2px 14px rgba(20, 20, 43, 0.04);
+          margin-bottom: 32px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          font-size: 1rem;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            グループ名
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {GroupName}
+          </div>
+        </div>
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            メンバー
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            @{BuyerScalablyID}
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            対象アイテム
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {ItemName}
+          </div>
+        </div>
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            注文ID
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {OrderID}
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            再開日
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {ReactivationDate}
+          </div>
+        </div>
+        <div style="display: flex">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            次回お支払日
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {NextBillingDate}
+          </div>
+        </div>
+      </div>
+
+      <p
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 16px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        アイテムのサブスクリプション状況の確認・管理は、以下のリンクより行っていただけます。
+      </p>
+
+      <!-- Button -->
+      <div style="text-align: center; margin-bottom: 24px">
+        <a
+          href="{ViewDetailsLink}"
+          style="
+            display: block;
+            width: fit-content;
+            background: #36499b;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 10px 36px;
+            border-radius: 8px;
+            margin-top: 16px;
+            margin-bottom: 0;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
+            transition: background 0.2s;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          "
+        >
+          View Details
+        </a>
+      </div>
+
+      <div>
+        <p
+          style="
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 8px;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          "
+        >
+          今後ともよろしくお願いします！
+        </p>
+        <p
+          style="
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 8px;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          "
+        >
+          {GroupName} チーム
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div
+    style="
+      width: 100%;
+      margin-top: 32px;
+      font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+    "
+  >
+    <div style="text-align: center; margin-bottom: 16px;">
+      <img
+        src="{GroupAvatar}"
+        alt="Group Avatar"
+        style="
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          display: inline-block;
+        "
+      />
+    </div>
+    <div
+      style="
+        color: #9ca0a8;
+        text-align: center;
+        margin-bottom: 2px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      このメールは送信専用です。ご返信いただいても対応できませんのでご了承ください。<br />
+      ご不明な点がございましたら、 {GroupName} のコミュニティオーナーまでお問い合わせください。
+    </div>
+  </div>
+</div>

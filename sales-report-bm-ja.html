@@ -1,0 +1,449 @@
+<!-- Add Google Fonts Poppins import and apply font-family -->
+<link
+  href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,600&display=swap"
+  rel="stylesheet"
+/>
+<div
+  style="
+    padding: 40px 16px;
+    background: url(&quot;https://s3.ap-northeast-1.amazonaws.com/test-membership.scalably.com/scalably-membership-svc/development/user/email-bg-4ff71950d8360b7abc38cca5aee40e0e.png&quot;)
+      center center / cover no-repeat;
+    font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+  "
+>
+  <!-- Main card -->
+  <div
+    style="
+      background: rgba(255, 255, 255, 0.95);
+      margin: 0 auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      max-width: 480px;
+      padding: 40px 32px 32px 32px;
+      margin-top: 40px;
+      font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+    "
+  >
+    <!-- Title -->
+    <div
+      style="
+        width: 100%;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <h2
+        style="
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #1a1a1a;
+          margin: 0 0 24px 0;
+          text-align: center;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        ショップ日次売上レポート - {Date}
+      </h2>
+    </div>
+    <!-- Email body -->
+    <div
+      style="
+        border-radius: 12px;
+        margin-bottom: 24px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 16px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        @{ScalablyID} 様
+      </div>
+      <p
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 24px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        本日の売上レポート
+      </p>
+
+      <div
+        style="
+          width: 100%;
+          border-radius: 12px;
+          background: #fff;
+          box-shadow: 0 2px 14px rgba(20, 20, 43, 0.04);
+          margin-bottom: 32px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          font-size: 1rem;
+        "
+      >
+        <!-- Transaction Date -->
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            取引日
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {Date}
+          </div>
+        </div>
+        <!-- New Subscriptions -->
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            新規購読売上
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {NewSubscriptionsAmount} JPY
+          </div>
+        </div>
+        <!-- Renewals -->
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            継続更新売上（成功）
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {RenewalsAmount} JPY
+          </div>
+        </div>
+        <!-- Subtotal -->
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            本日分小計
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {SubtotalAmount} JPY
+          </div>
+        </div>
+        <!-- Tax -->
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            本日分消費税
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {TaxAmount} JPY
+          </div>
+        </div>
+        <!-- Total Sales -->
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            本日分売上合計
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 600;
+            "
+          >
+            {TotalAmount} JPY
+          </div>
+        </div>
+        <!-- Platform Fee -->
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            本日分プラットフォーム利用料
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {PlatformFeeAmount} JPY
+          </div>
+        </div>
+        <!-- Total Receiving Amount -->
+        <div style="display: flex">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            本日分お受取合計金額
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 600;
+            "
+          >
+            {ReceivingAmount} JPY
+          </div>
+        </div>
+      </div>
+
+      <p
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 24px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        本日、自動更新の決済エラーが <strong>{QuantityPaymentError}</strong> 件発生いたしました。 対象のお客様へお支払い情報の更新をご案内いただくことをお勧めいたします。
+      </p>
+
+      <p
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 16px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        レポートの詳細はこちらからご確認いただけます。
+      </p>
+
+      <!-- Button -->
+      <div style="text-align: center; margin-bottom: 24px">
+        <a
+          href="{SalesDashboardLink}"
+          style="
+            display: block;
+            width: fit-content;
+            background: #36499b;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 10px 36px;
+            border-radius: 8px;
+            margin-top: 16px;
+            margin-bottom: 0;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
+            transition: background 0.2s;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          "
+        >
+          Sales Dashboard
+        </a>
+      </div>
+
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 24px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        Scalablyとともに、コミュニティとビジネスを成長させていただきありがとうございます。<br />
+        今後も皆さまの成功を全力でサポートしてまいります。
+      </div>
+
+      <div>
+        <p
+          style="
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 8px;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          "
+        >
+          どうぞよろしくお願いいたします。
+        </p>
+        <p
+          style="
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 8px;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          "
+        >
+          Scalably チーム
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div
+    style="
+      width: 100%;
+      margin-top: 32px;
+      font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+    "
+  >
+    <div style="text-align: center">
+      <img
+        src="https://s3.ap-northeast-1.amazonaws.com/test-membership.scalably.com/scalably-membership-svc/development/user/scalably-logo-98676aa0ba659bfa58f61dd7554e112c.png"
+        alt="Scalably Logo"
+        style="
+          width: 160px;
+          height: 39px;
+          margin-bottom: 8px;
+          margin-top: 32px;
+          display: inline-block;
+        "
+      />
+    </div>
+    <div
+      style="
+        color: #9ca0a8;
+        text-align: center;
+        margin-bottom: 2px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      本メールは送信専用ドメインから配信されています。 誠に恐れ入りますが、本メールに返信いただいても回答いたしかねますのであらかじめご了承ください。<br />
+      ご不明な点やご質問がございましたら、下記のアドレスまでお気軽にお問い合わせください。 <br />
+      <a
+        href="mailto:support@scalably.com"
+        style="
+          color: #000;
+          text-decoration: underline;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+        >support@scalably.com</a
+      >
+    </div>
+  </div>
+</div>

@@ -1,0 +1,608 @@
+<!-- Add Google Fonts Poppins import and apply font-family -->
+<link
+  href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,600&display=swap"
+  rel="stylesheet"
+/>
+<div
+  style="
+    padding: 40px 16px;
+    background: url(&quot;https://s3.ap-northeast-1.amazonaws.com/test-membership.scalably.com/scalably-membership-svc/development/user/email-bg-4ff71950d8360b7abc38cca5aee40e0e.png&quot;)
+      center center / cover no-repeat;
+    font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+  "
+>
+  <!-- Main card -->
+  <div
+    style="
+      background: rgba(255, 255, 255, 0.95);
+      margin: 0 auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      max-width: 480px;
+      padding: 40px 32px 32px 32px;
+      margin-top: 40px;
+      font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+    "
+  >
+    <!-- Title -->
+    <div
+      style="
+        width: 100%;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <h2
+        style="
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #1a1a1a;
+          margin: 0 0 24px 0;
+          text-align: center;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        Renewal Subscription Transaction on Scalably 🎉
+      </h2>
+    </div>
+    <!-- Email body -->
+    <div
+      style="
+        border-radius: 12px;
+        margin-bottom: 24px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 16px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        Dear @{ScalablyID},
+      </div>
+      <p
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 16px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        Great news!<br />
+        A subscription has just successfully renewed on the Scalably platform.
+      </p>
+      <p
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 24px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        You can find the transaction details below. If you have any questions or
+        need support, we’re always here to help.
+      </p>
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 24px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        Transaction Details:
+      </div>
+      <div
+        style="
+          width: 100%;
+          border-radius: 12px;
+          background: #fff;
+          box-shadow: 0 2px 14px rgba(20, 20, 43, 0.04);
+          margin-bottom: 32px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          font-size: 1rem;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            Group
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {GroupName}
+          </div>
+        </div>
+        <div style="display: flex">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            Transaction Date
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {OrderDate}
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            Order ID
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {OrderID}
+          </div>
+        </div>
+
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            Buyer
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            @{BuyerScalablyID}
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            Subtotal
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {SubtotalAmount} JPY
+          </div>
+        </div>
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            Tax
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {TaxAmount} JPY
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            Total Order Amount
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {TotalAmount} JPY
+          </div>
+        </div>
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            Platform fee
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {PlatformFee} JPY
+          </div>
+        </div>
+        <div style="display: flex; background: #fbfbfc">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            "
+          >
+            Receiving amount
+          </div>
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #222;
+              font-weight: 500;
+            "
+          >
+            {ReceiveAmount} JPY
+          </div>
+        </div>
+      </div>
+
+      <!-- ItemsCard -->
+      <div
+        style="
+          background: #fff;
+          border-radius: 16px;
+          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+          padding: 0 0 20px 0;
+          margin: 0 auto 0 auto;
+          max-width: 250px;
+          width: 100%;
+          border: 1px solid #f0f0f0;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          text-align: center;
+        "
+      >
+        <div
+          style="
+            margin: 16px 0;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            text-align: center;
+            white-space: nowrap;
+          "
+        >
+          <span
+            style="
+              display: inline-block;
+              vertical-align: middle;
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+              background-color: #e6e8ec;
+              margin-right: 8px;
+            "
+          ></span>
+          <span
+            style="
+              display: inline-block;
+              vertical-align: middle;
+              width: 120px;
+              height: 16px;
+              border-radius: 32px;
+              background-color: #e6e8ec;
+              margin-right: 8px;
+            "
+          ></span>
+          <span
+            style="
+              display: inline-block;
+              vertical-align: middle;
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+              background-color: #e6e8ec;
+            "
+          ></span>
+        </div>
+        <div
+          style="
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            text-align: center;
+          "
+        >
+          <img
+            src="{CardPhoto}"
+            alt="Card"
+            style="
+              width: 100%;
+              height: 250px;
+              object-fit: cover;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+              display: inline-block;
+            "
+          />
+        </div>
+        <!-- Gift name and group -->
+        <div
+          style="
+            width: 100%;
+            margin-top: 18px;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            text-align: center;
+          "
+        >
+          <div
+            style="
+              font-size: 1.08rem;
+              font-weight: 600;
+              color: #222;
+              margin-bottom: 2px;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            "
+          >
+            {CardName}
+          </div>
+          <div
+            style="
+              font-size: 0.75rem;
+              color: #888;
+              margin-bottom: 0;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            "
+          >
+            {GroupName}
+          </div>
+        </div>
+        <!-- Divider -->
+        <div
+          style="
+            width: 90%;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 18px auto 12px auto;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          "
+        ></div>
+        <p
+          style="
+            font-size: 0.875rem;
+            color: #222;
+            margin-bottom: 2px;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          "
+        >
+          {CardPrice}
+        </p>
+      </div>
+      
+      <p
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-top: 24px;
+          margin-bottom: 16px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        You can review the order's invoice here:
+      </p>
+
+      <!-- Button -->
+      <div style="text-align: center; margin-bottom: 24px">
+        <a
+          href="{InvoiceLink}"
+          style="
+            display: block;
+            width: fit-content;
+            background: #36499b;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 10px 36px;
+            border-radius: 8px;
+            margin-top: 16px;
+            margin-bottom: 0;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
+            transition: background 0.2s;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          "
+        >
+          Invoice
+        </a>
+      </div>
+
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 24px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        Thanks for growing your community and business with Scalably — we’re
+        excited to be part of your journey!
+      </div>
+      <div>
+        <p
+          style="
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 8px;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          "
+        >
+          Warm regards,
+        </p>
+        <p
+          style="
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 8px;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+          "
+        >
+          The Scalably Team
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div
+    style="
+      width: 100%;
+      margin-top: 32px;
+      font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+    "
+  >
+    <div style="text-align: center">
+      <img
+        src="https://s3.ap-northeast-1.amazonaws.com/test-membership.scalably.com/scalably-membership-svc/development/user/scalably-logo-98676aa0ba659bfa58f61dd7554e112c.png"
+        alt="Scalably Logo"
+        style="
+          width: 160px;
+          height: 39px;
+          margin-bottom: 8px;
+          margin-top: 32px;
+          display: inline-block;
+        "
+      />
+    </div>
+    <div
+      style="
+        color: #9ca0a8;
+        text-align: center;
+        margin-bottom: 2px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      This email is for sending only, please note that we will not be able to
+      respond to your reply.<br />
+      If you have any questions, feel free to message us at <br />
+      <a
+        href="mailto:support@scalably.com"
+        style="
+          color: #000;
+          text-decoration: underline;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+        >support@scalably.com</a
+      >
+    </div>
+  </div>
+</div>

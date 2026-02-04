@@ -1,0 +1,191 @@
+<!-- Add Google Fonts Poppins import and apply font-family -->
+<link
+  href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,600&display=swap"
+  rel="stylesheet"
+/>
+<div
+  style="
+    padding: 40px 16px;
+    background: url('https://s3.ap-northeast-1.amazonaws.com/test-membership.scalably.com/scalably-membership-svc/development/user/email-bg-4ff71950d8360b7abc38cca5aee40e0e.png')
+      center center / cover no-repeat;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  "
+>
+  <!-- Main card -->
+  <div
+    style="
+      background: rgba(255, 255, 255, 0.95);
+      margin: 0 auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      max-width: 480px;
+      padding: 40px 32px 32px 32px;
+      margin-top: 40px;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    "
+  >
+    <!-- Title -->
+    <div
+      style="width: 100%; font-family: 'Poppins', Arial, Helvetica, sans-serif"
+    >
+      <h2
+        style="
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #1a1a1a;
+          margin: 0 0 24px 0;
+          text-align: center;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        "
+      >
+        {FundingName} クラウドファンディングが終了いたしました！
+      </h2>
+    </div>
+    <!-- Email body and gift card -->
+    <div
+      style="
+        border-radius: 12px;
+        margin-bottom: 24px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      "
+    >
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 16px;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        "
+      >
+        @{Scalably ID}様,
+      </div>
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        "
+      >
+      この度は、{FundingName}クラウドファンディングイベントが無事に終了いたしましたことをご報告させていただきます。<br />
+      ご参加、ご支援くださった皆様に心より感謝申し上げます。皆様のご支援が、一つのアイデアを現実のものへと変えてくださいました。本当にありがとうございます。
+      </div>
+      <p style="font-size: 1rem;
+      color: #222;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;">イベント名: <b>{FundingName}</b></p>
+       <div style="margin: 16px 0; font-size: 1rem;
+       color: #222;
+       font-family: 'Poppins', Arial, Helvetica, sans-serif;">
+        このイベントは、{EndDate}をもちまして正式に終了し、{NumberOfSupporters}名の素晴らしいサポーターから、合計{TotalRaised} JPYという素晴らしいご支援をいただきました。<br/>
+        今後、{FundingName}マガジンで、{GroupName}の最新情報をぜひチェックしてください。
+       </div>
+      <div style="position: relative; margin-bottom: 8px; margin-top: 32px; height: 347px;">
+        <img
+          src="{FundingImage}"
+          alt="Funding"
+          style="
+            width: 100%;
+            height: 347px;
+            border-radius: 16px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+          "
+        />
+      </div>
+     
+      <!-- Button -->
+      <div style="text-align: center">
+        <a
+          href="{Link Redirect}"
+          style="
+            display: inline-block;
+            background: #36499b;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 10px 36px;
+            border-radius: 8px;
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
+            transition: background 0.2s;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          "
+        >
+        Explore More Events
+        </a>
+      </div>
+      <div>
+        <p
+          style="
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 8px;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          "
+        >
+        改めまして、{GroupName}の活動に多大なご貢献をいただき、誠にありがとうございました。
+        </p>
+        <p
+          style="
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 8px;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          "
+        >
+        今後ともよろしくお願いします！
+        </p>
+        <p
+          style="
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 8px;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          "
+        >
+        {GroupName} チーム
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div
+    style="
+      width: 100%;
+      margin-top: 32px;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    "
+  >
+    <div style="text-align: center">
+      <img
+        src="{GroupImage}"
+        alt="Group"
+        style="
+          width: 160px;
+          height: 160px;
+          border-radius: 50%;
+          margin-bottom: 8px;
+          margin-top: 32px;
+          display: inline-block;
+        "
+      />
+    </div>
+    <div
+      style="
+        color: #9ca0a8;
+        text-align: center;
+        margin-bottom: 2px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      "
+    >
+    このメールは送信専用です。ご返信いただいても対応できませんのでご了承ください。<br />
+    ご不明な点がございましたら、{CommunityName}
+    のコミュニティオーナーまでお問い合わせください。 <br />
+    </div>
+  </div>
+</div>
