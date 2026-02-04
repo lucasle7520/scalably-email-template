@@ -70,9 +70,10 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Scalablyをご利用いただきありがとうございます。 あなたのコミュニティのメンバーがサブスクリプションを更新されましたので、以下の通りお知らせいたします。
+        Scalablyをご利用いただきありがとうございます。
+        あなたのコミュニティのメンバーがサブスクリプションを更新されましたので、以下の通りお知らせいたします。
       </p>
-      
+
       <div
         style="
           font-size: 1rem;
@@ -125,7 +126,7 @@
             {GroupName}
           </div>
         </div>
-        <div style="display: flex">
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
           <div
             style="
               width: 50%;
@@ -168,32 +169,6 @@
               letter-spacing: 0.04em;
             "
           >
-            注文ID
-          </div>
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #222;
-              font-weight: 500;
-            "
-          >
-            {OrderID}
-          </div>
-        </div>
-
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            "
-          >
             購入者
           </div>
           <div
@@ -207,13 +182,7 @@
             @{BuyerScalablyID} 様
           </div>
         </div>
-        <div
-          style="
-            display: flex;
-            border-bottom: 1px solid #e6e8ed;
-            background: #fbfbfc;
-          "
-        >
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
           <div
             style="
               width: 50%;
@@ -238,7 +207,13 @@
             {SubtotalAmount} JPY
           </div>
         </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
           <div
             style="
               width: 50%;
@@ -263,13 +238,7 @@
             {TaxAmount} JPY
           </div>
         </div>
-        <div
-          style="
-            display: flex;
-            border-bottom: 1px solid #e6e8ed;
-            background: #fbfbfc;
-          "
-        >
+        <div style="display: flex">
           <div
             style="
               width: 50%;
@@ -425,7 +394,7 @@
           {CardPrice}
         </p>
       </div>
-      
+
       <p
         style="
           font-size: 1rem;
@@ -529,8 +498,10 @@
         font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
-      本メールは送信専用ドメインから配信されています。 誠に恐れ入りますが、本メールに返信いただいても回答いたしかねますのであらかじめご了承ください。<br />
-      ご不明な点やご質問がございましたら、下記のアドレスまでお気軽にお問い合わせください。 <br />
+      本メールは送信専用ドメインから配信されています。
+      誠に恐れ入りますが、本メールに返信いただいても回答いたしかねますのであらかじめご了承ください。<br />
+      ご不明な点やご質問がございましたら、下記のアドレスまでお気軽にお問い合わせください。
+      <br />
       <a
         href="mailto:support@scalably.com"
         style="

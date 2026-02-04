@@ -70,9 +70,10 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        A new transaction has been processed on Scalably: A member of your community has successfully renewed their subscription
+        A new transaction has been processed on Scalably: A member of your
+        community has successfully renewed their subscription
       </p>
-      
+
       <div
         style="
           font-size: 1rem;
@@ -125,7 +126,7 @@
             {GroupName}
           </div>
         </div>
-        <div style="display: flex">
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
           <div
             style="
               width: 50%;
@@ -168,32 +169,6 @@
               letter-spacing: 0.04em;
             "
           >
-            Order ID
-          </div>
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #222;
-              font-weight: 500;
-            "
-          >
-            {OrderID}
-          </div>
-        </div>
-
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            "
-          >
             Buyer
           </div>
           <div
@@ -207,13 +182,7 @@
             @{BuyerScalablyID}
           </div>
         </div>
-        <div
-          style="
-            display: flex;
-            border-bottom: 1px solid #e6e8ed;
-            background: #fbfbfc;
-          "
-        >
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
           <div
             style="
               width: 50%;
@@ -238,7 +207,13 @@
             {SubtotalAmount} JPY
           </div>
         </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
           <div
             style="
               width: 50%;
@@ -263,13 +238,7 @@
             {TaxAmount} JPY
           </div>
         </div>
-        <div
-          style="
-            display: flex;
-            border-bottom: 1px solid #e6e8ed;
-            background: #fbfbfc;
-          "
-        >
+        <div style="display: flex">
           <div
             style="
               width: 50%;
@@ -425,7 +394,7 @@
           {CardPrice}
         </p>
       </div>
-      
+
       <p
         style="
           font-size: 1rem;
