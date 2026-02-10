@@ -41,7 +41,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        決済失敗のお知らせ
+        {ItemName} のお支払いに関するお知らせ
       </h2>
     </div>
     <!-- Email body -->
@@ -129,37 +129,6 @@
               letter-spacing: 0.04em;
             "
           >
-            決済ステータス
-          </div>
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #e53e3e;
-              font-weight: 600;
-            "
-          >
-            エラー
-          </div>
-        </div>
-        <div
-          style="
-            display: flex;
-            border-bottom: 1px solid #e6e8ed;
-            background: #fbfbfc;
-          "
-        >
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            "
-          >
             グループ名
           </div>
           <div
@@ -173,7 +142,13 @@
             {GroupName}
           </div>
         </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
           <div
             style="
               width: 50%;
@@ -198,13 +173,7 @@
             @{BuyerScalablyID}
           </div>
         </div>
-        <div
-          style="
-            display: flex;
-            border-bottom: 1px solid #e6e8ed;
-            background: #fbfbfc;
-          "
-        >
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
           <div
             style="
               width: 50%;
@@ -229,7 +198,7 @@
             {TotalAmount} 円
           </div>
         </div>
-        <div style="display: flex">
+        <div style="display: flex; background: #fbfbfc">
           <div
             style="
               width: 50%;
