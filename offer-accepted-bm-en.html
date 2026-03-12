@@ -41,7 +41,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        {Campaign Name} へのご参加ありがとうございます！
+        Your Offer Has Been Accepted
       </h2>
     </div>
     <!-- Email body -->
@@ -60,7 +60,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Dear {ScalablyId},
+        Hi {Requester ScalablyId},
       </div>
       <div
         style="
@@ -70,18 +70,8 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        {CommunityName} の {Campaign Name}
-        にご参加いただき、誠にありがとうございます
-      </div>
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 24px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        ご一緒できることを大変嬉しく思います。
+        Good news! Your offer for {Campaign Name} in {Group Name} has been
+        accepted by {CO/CL ScalablyId}.
       </div>
       <div
         style="
@@ -91,27 +81,20 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        以下がご登録内容の詳細です：
+        This means the participant has agreed to take part in the campaign and
+        will proceed with completing the assigned tasks.
       </div>
       <div
         style="
           font-size: 1rem;
           color: #222;
-          margin-bottom: 8px;
+          margin-bottom: 16px;
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        キャンペーン名: {Campaign Name}
-      </div>
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 24px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        登録日時: {Date}
+        <strong>Next step:</strong><br />
+        You can track the participant’s progress and review their report once it
+        is submitted.
       </div>
       <div
         style="
@@ -121,7 +104,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        下のボタンをクリックすると、キャンペーンの詳細を確認し、コミュニティを探索できます：
+        View Offer Details:
       </div>
       <!-- Button -->
       <div style="text-align: center">
@@ -144,7 +127,7 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          Go to Campaign
+          Offer Details
         </a>
       </div>
       <div
@@ -156,7 +139,8 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        本メールは自動送信されています。ご返信いただいても対応できませんのでご了承ください。
+        Thank you for actively managing and supporting your community campaigns.
+        We’re excited to see the results!
       </div>
       <div>
         <p
@@ -167,7 +151,7 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          コミュニティの一員になっていただき、ありがとうございます。
+          With appreciation,
         </p>
         <p
           style="
@@ -177,7 +161,7 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          Scalably チーム
+          The Scalably Team
         </p>
       </div>
     </div>
@@ -192,12 +176,11 @@
   >
     <div style="text-align: center">
       <img
-        src="{GroupImage}"
-        alt="Group"
+        src="https://s3.ap-northeast-1.amazonaws.com/test-membership.scalably.com/scalably-membership-svc/development/user/scalably-logo-98676aa0ba659bfa58f61dd7554e112c.png"
+        alt="Scalably Logo"
         style="
           width: 160px;
-          height: 160px;
-          border-radius: 50%;
+          height: 39px;
           margin-bottom: 8px;
           margin-top: 32px;
           display: inline-block;
@@ -212,9 +195,18 @@
         font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
-      このメールは送信専用です。ご返信いただいても対応できませんのでご了承ください。<br />
-      ご不明な点がございましたら、{CommunityName}
-      のコミュニティオーナーまでお問い合わせください。 <br />
+      This email is for sending only, please note that we will not be able to
+      respond to your reply.<br />
+      If you have any questions, feel free to message us at <br />
+      <a
+        href="mailto:support@scalably.com"
+        style="
+          color: #000;
+          text-decoration: underline;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+        >support@scalably.com</a
+      >
     </div>
   </div>
 </div>
