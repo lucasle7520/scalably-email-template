@@ -180,31 +180,6 @@
               letter-spacing: 0.04em;
             "
           >
-            Order ID
-          </div>
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #222;
-              font-weight: 500;
-            "
-          >
-            {OrderCode}
-          </div>
-        </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            "
-          >
             Buyer
           </div>
           <div
@@ -218,13 +193,7 @@
             @{BuyerID}
           </div>
         </div>
-        <div
-          style="
-            display: flex;
-            border-bottom: 1px solid #e6e8ed;
-            background: #fbfbfc;
-          "
-        >
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
           <div
             style="
               width: 50%;
@@ -249,7 +218,13 @@
             {Subtotal} JPY
           </div>
         </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
           <div
             style="
               width: 50%;
@@ -274,13 +249,7 @@
             {Tax} JPY
           </div>
         </div>
-        <div
-          style="
-            display: flex;
-            border-bottom: 1px solid #e6e8ed;
-            background: #fbfbfc;
-          "
-        >
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
           <div
             style="
               width: 50%;
@@ -305,7 +274,13 @@
             {Total} JPY
           </div>
         </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
+        <div
+          style="
+            display: flex;
+            border-bottom: 1px solid #e6e8ed;
+            background: #fbfbfc;
+          "
+        >
           <div
             style="
               width: 50%;
@@ -425,9 +400,11 @@
           <img
             src="{CardImage}"
             alt="Card"
+            width="250"
+            height="250"
             style="
               width: 100%;
-              height: 250px;
+              aspect-ratio: 1 / 1;
               object-fit: cover;
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
               display: inline-block;
