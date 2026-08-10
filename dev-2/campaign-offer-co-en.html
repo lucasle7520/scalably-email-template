@@ -41,7 +41,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        要対応：Blue Badgeサブスクリプションのお支払いに失敗しました
+        New Campaign Offer Available for Your Community
       </h2>
     </div>
     <!-- Email body -->
@@ -60,9 +60,9 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        @{ScalablyID} 様
+        Dear {Community Name},
       </div>
-      <p
+      <div
         style="
           font-size: 1rem;
           color: #222;
@@ -70,9 +70,9 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        残念ながら、<strong>Blue Badge Subscription</strong> の最近のお支払いを処理することができませんでした。
-      </p>
-      <p
+        Thank you for choosing Scalably.
+      </div>
+      <div
         style="
           font-size: 1rem;
           color: #222;
@@ -80,10 +80,9 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        <strong>お支払いエラー内容:</strong><br />
-        {PaymentIssue}
-      </p>
-      <p
+        We’re excited to inform you that your community has received a new campaign offer.
+      </div>
+      <div
         style="
           font-size: 1rem;
           color: #222;
@@ -91,26 +90,22 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        サービスの中断を防ぐため、できるだけ早くお支払い方法を更新していただきますようお願いいたします。
-      </p>
-
+        Click the button below to view the details and register your community for the campaign.
+      </div>
       <!-- Button -->
-      <div style="text-align: center; margin-bottom: 24px">
+      <div style="text-align: center">
         <a
-          href="{UpdatePaymentInformationLink}"
+          href="{Link Redirect}"
           style="
-            display: block;
-            width: fit-content;
+            display: inline-block;
             background: #36499b;
             color: #fff;
             font-weight: 600;
             font-size: 1rem;
             padding: 10px 36px;
             border-radius: 8px;
-            margin-top: 16px;
+            margin-top: 0;
             margin-bottom: 0;
-            margin-right: auto;
-            margin-left: auto;
             text-align: center;
             text-decoration: none;
             box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
@@ -118,23 +113,15 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          Update Payment Information
+          Join Campaign
         </a>
       </div>
-
-      <p
+      <div
         style="
-          font-size: 1rem;
-          color: #222;
           margin-top: 24px;
-          margin-bottom: 24px;
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        今後も継続してご利用いただけることを心より願っております。
-      </p>
-
-      <div>
         <p
           style="
             font-size: 1rem;
@@ -143,7 +130,7 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          よろしくお願いいたします。
+          Warm regards,
         </p>
         <p
           style="
@@ -153,7 +140,7 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          <strong>Scalablyチーム</strong>
+          The Scalably Team
         </p>
       </div>
     </div>
@@ -187,8 +174,10 @@
         font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
-      ※このメールは自動送信されています。返信はできません。<br />
-      ご不明な点がございましたら、<a
+      This email is for sending only, please note that we will not be able to
+      respond to your reply.<br />
+      If you have any questions, feel free to message us at <br />
+      <a
         href="mailto:support@scalably.com"
         style="
           color: #000;
@@ -196,7 +185,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
         >support@scalably.com</a
-      > までお気軽にお問い合わせください。
+      >
     </div>
   </div>
 </div>
