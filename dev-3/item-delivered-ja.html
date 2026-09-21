@@ -24,6 +24,46 @@
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
+    <!-- Community header -->
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="
+        margin-bottom: 24px;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 20px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <tr>
+        <td width="40" valign="middle" style="padding-right: 12px">
+          <img
+            src="{CommunityImage}"
+            alt="Group Avatar"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 8px;
+              display: block;
+            "
+          />
+        </td>
+        <td valign="middle">
+          <div
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #1a1a1a;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            "
+          >
+            {CommunityName}
+          </div>
+        </td>
+      </tr>
+    </table>
     <!-- Title -->
     <div
       style="
@@ -41,7 +81,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        {ItemName} が配達されました
+        配達完了：{ItemName}
       </h2>
     </div>
     <!-- Email body -->
@@ -56,21 +96,11 @@
         style="
           font-size: 1rem;
           color: #222;
-          margin-bottom: 8px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        @{ScalablyID} 様
-      </div>
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
           margin-bottom: 16px;
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        {CommunityName} の {ItemName} が配達されました。
+        {CommunityName}でご購入いただいた「{ItemName}」のお届けが完了しました。
       </div>
       <!-- Item image -->
       <div style="text-align: center; margin-bottom: 24px">
@@ -89,28 +119,6 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         />
-      </div>
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 8px;
-          font-weight: 600;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        配送状況：配達完了
-      </div>
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 24px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        ご注文の商品のお届けが完了しました。<br />
-        商品をお楽しみください。
       </div>
       <!-- Button -->
       <div style="text-align: center">
@@ -133,7 +141,7 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          商品を見る
+          商品を確認
         </a>
       </div>
     </div>
@@ -142,34 +150,22 @@
   <div
     style="
       width: 100%;
-      margin-top: 32px;
+      max-width: 480px;
+      margin: 24px auto 0 auto;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
-    <div style="text-align: center">
-      <img
-        src="{CommunityImage}"
-        alt="Group"
-        style="
-          width: 160px;
-          height: 160px;
-          border-radius: 50%;
-          margin-bottom: 8px;
-          margin-top: 32px;
-          display: inline-block;
-        "
-      />
-    </div>
     <div
       style="
         color: #9ca0a8;
         text-align: center;
-        margin-bottom: 2px;
+        font-size: 0.75rem;
         font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
-      このメールは送信専用です。ご返信いただいても対応できませんのでご了承ください。<br />
-      ご不明な点がございましたら、{CommunityName}のコミュニティオーナーまでお問い合わせください。<br />
+      Powered by Scalably
     </div>
   </div>
 </div>
