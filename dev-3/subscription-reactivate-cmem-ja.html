@@ -41,7 +41,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        サブスクリプションの再開が完了しました
+        定期購入再開：{ItemName}
       </h2>
     </div>
     <!-- Email body -->
@@ -70,7 +70,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        おかえりなさい！
+        {CommunityName}の「{ItemName}」の定期購入が再開されました。
       </p>
       <p
         style="
@@ -80,29 +80,13 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        {GroupName} 内の {ItemName}
-        のサブスクリプション再開手続きが完了いたしました。<br /><br />
-        次回のご請求日は
-        <strong>{NextBillingDate}</strong>
-        です。その際、お支払いは自動的に処理されます。
-      </p>
-
-      <p
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-top: 24px;
-          margin-bottom: 16px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        🔍 アイテムの詳細を確認する：
+        {NextBillingDate}から自動でのお支払いが再開されます。
       </p>
 
       <!-- Button -->
       <div style="text-align: center; margin-bottom: 32px">
         <a
-          href="{MyWalletItemLink}"
+          href="{LinkRedirect}"
           style="
             display: block;
             width: fit-content;
@@ -123,43 +107,8 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          My Item
+          定期購入を確認
         </a>
-      </div>
-
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 24px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        再びご参加いただけて大変嬉しく思います。<br />
-        引き続き、サブスクリプションを最大限ご活用ください。
-      </div>
-
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          今後ともよろしくお願いします！
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          {GroupName} チーム
-        </p>
       </div>
     </div>
   </div>
@@ -173,8 +122,8 @@
   >
     <div style="text-align: center; margin-bottom: 16px">
       <img
-        src="{GroupAvatar}"
-        alt="Group Avatar"
+        src="{CommunityAvatar}"
+        alt="Community Avatar"
         style="
           width: 48px;
           height: 48px;
@@ -192,7 +141,7 @@
       "
     >
       このメールは送信専用です。ご返信いただいても対応できませんのでご了承ください。<br />
-      ご不明な点がございましたら、 {GroupName}
+      ご不明な点がございましたら、 {CommunityName}
       のコミュニティオーナーまでお問い合わせください。
     </div>
   </div>

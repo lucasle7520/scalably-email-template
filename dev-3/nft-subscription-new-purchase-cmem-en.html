@@ -24,6 +24,46 @@
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
+    <!-- Community header -->
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="
+        margin-bottom: 24px;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 20px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <tr>
+        <td width="40" valign="middle" style="padding-right: 12px">
+          <img
+            src="{CommunityAvatar}"
+            alt="Community Avatar"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 8px;
+              display: block;
+            "
+          />
+        </td>
+        <td valign="middle">
+          <div
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #1a1a1a;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            "
+          >
+            {CommunityName}
+          </div>
+        </td>
+      </tr>
+    </table>
     <!-- Title -->
     <div
       style="
@@ -41,10 +81,10 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Your {CardName} is ready to use!
+        Membership subscription started: {MembershipName}
       </h2>
     </div>
-    <!-- Email body and gift card -->
+    <!-- Email body and membership card -->
     <div
       style="
         border-radius: 12px;
@@ -60,7 +100,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Dear {ScalablyID},
+        Dear @{BuyerScalablyID},
       </div>
       <div
         style="
@@ -70,8 +110,8 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Congratulations!<br />
-        You’ve successfully purchased {CardName} from {GroupName}.
+        Your {MembershipName} membership with {CommunityName} is now active. It
+        will renew automatically unless canceled.
         <br /><br />
         Your subscription is now active:
       </div>
@@ -140,8 +180,8 @@
           "
         >
           <img
-            src="{SubscriptionImage}"
-            alt="Subscription"
+            src="{MembershipImage}"
+            alt="Membership"
             width="250"
             height="250"
             style="
@@ -153,7 +193,7 @@
             "
           />
         </div>
-        <!-- Subscription name and group -->
+        <!-- Membership name and community -->
         <div
           style="
             width: 100%;
@@ -171,7 +211,7 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {CardName}
+            {MembershipName}
           </div>
           <div
             style="
@@ -181,26 +221,16 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {GroupName}
+            {CommunityName}
           </div>
         </div>
       </div>
     </div>
-    <!-- Button -->
+    <!-- Buttons -->
     <div style="width: 100%">
-      <p
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 8px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        🔍 View your Subscription details and benefits:
-      </p>
       <div style="text-align: center; margin-bottom: 16px">
         <a
-          href="{MySubscriptionLink}"
+          href="{LinkRedirect}"
           style="
             display: block;
             width: fit-content;
@@ -221,10 +251,10 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          My Subscription
+          View membership
         </a>
         <a
-          href="{InvoiceLink}"
+          href="{InvoiceRedirect}"
           style="
             display: block;
             width: fit-content;
@@ -248,75 +278,28 @@
           View invoice
         </a>
       </div>
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          Thank you for your purchase. We’re excited for you to enjoy your new
-          benefits!
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          Sincerely,
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          The {GroupName} Team
-        </p>
-      </div>
     </div>
   </div>
   <!-- Footer -->
   <div
     style="
       width: 100%;
-      margin-top: 32px;
+      max-width: 480px;
+      margin: 24px auto 0 auto;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
-    <div style="text-align: center">
-      <img
-        src="{GroupImage}"
-        alt="Group"
-        style="
-          width: 160px;
-          height: 160px;
-          border-radius: 50%;
-          margin-bottom: 8px;
-          margin-top: 32px;
-          display: inline-block;
-        "
-      />
-    </div>
     <div
       style="
         color: #9ca0a8;
         text-align: center;
-        margin-bottom: 2px;
+        font-size: 0.75rem;
         font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
-      This is a no-reply email. Please note that responses to this message will
-      not be monitored.<br />
-      For any questions, kindly reach out to the Community Owner of {GroupName}.
-      <br />
+      Powered by Scalably
     </div>
   </div>
 </div>

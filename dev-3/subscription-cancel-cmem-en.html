@@ -41,7 +41,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Subscription Cancellation Confirmed
+        Subscription cancellation confirmed: {ItemName}
       </h2>
     </div>
     <!-- Email body -->
@@ -70,26 +70,23 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        We’re writing to confirm that your subscription for {ItemName} has been canceled.<br />
-        You will continue to have access to your benefits until: <strong>{SubscriptionEndDate}</strong>
+        Your subscription to {ItemName} from {CommunityName} will not renew.
       </p>
-      
       <p
         style="
           font-size: 1rem;
           color: #222;
-          margin-top: 24px;
           margin-bottom: 16px;
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Changed your mind? If you’d like to keep your subscription active and prevent it from expiring, you can resume any time by clicking the button below:
+        You can continue using your benefits until {ExpirationDate}.
       </p>
 
       <!-- Button -->
       <div style="text-align: center; margin-bottom: 32px">
         <a
-          href="{ResubscriptionLink}"
+          href="{LinkRedirect}"
           style="
             display: block;
             width: fit-content;
@@ -110,31 +107,8 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          Reactivate Subscription
+          View subscription
         </a>
-      </div>
-
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          Sincerely,
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          The {GroupName} Team
-        </p>
       </div>
     </div>
   </div>
@@ -146,10 +120,10 @@
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
-    <div style="text-align: center; margin-bottom: 16px;">
+    <div style="text-align: center; margin-bottom: 16px">
       <img
-        src="{GroupAvatar}"
-        alt="Group Avatar"
+        src="{CommunityAvatar}"
+        alt="Community Avatar"
         style="
           width: 48px;
           height: 48px;
@@ -166,8 +140,10 @@
         font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
-      This is a no-reply email. Please note that responses to this message will not be monitored.<br />
-      For any questions, kindly reach out to the Community Owner of {GroupName}.
+      This is a no-reply email. Please note that responses to this message will
+      not be monitored.<br />
+      For any questions, kindly reach out to the Community Owner of
+      {CommunityName}.
     </div>
   </div>
 </div>

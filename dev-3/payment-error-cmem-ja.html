@@ -41,7 +41,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        {ItemName} のお支払いに関するお知らせ
+        お支払いを処理できませんでした：{ItemName}
       </h2>
     </div>
     <!-- Email body -->
@@ -70,10 +70,17 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        誠に残念ながら、{GroupName}
-        での「{ItemName}」に関する最新のお支払いを処理することができませんでした。<br />
-        決済エラーの詳細: {PaymentIssue}<br />
-        サービスの停止を避けるため、お支払い情報の更新、またはアカウントへのチャージをお願いいたします。
+        {CommunityName}の「{ItemName}」の定期購入の更新時に、お支払いを処理できませんでした。
+      </p>
+      <p
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 16px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        定期購入の詳細画面を開き、「支払いを再試行」を選択してください。
       </p>
 
       <!-- ItemsCard -->
@@ -142,8 +149,8 @@
           "
         >
           <img
-            src="{CardPhoto}"
-            alt="Card"
+            src="{ItemImage}"
+            alt="Item"
             width="250"
             height="250"
             style="
@@ -155,7 +162,7 @@
             "
           />
         </div>
-        <!-- Gift name and group -->
+        <!-- Item name and community -->
         <div
           style="
             width: 100%;
@@ -183,7 +190,7 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {GroupName}
+            {CommunityName}
           </div>
         </div>
         <!-- Divider -->
@@ -211,7 +218,7 @@
       <!-- Button -->
       <div style="text-align: center; margin-bottom: 32px">
         <a
-          href="{UpdatePaymentLink}"
+          href="{LinkRedirect}"
           style="
             display: block;
             width: fit-content;
@@ -232,32 +239,8 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          Update payment information
+          定期購入を確認
         </a>
-      </div>
-
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 24px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        今後とも引き続きサービスをご利用いただけることを心よりお待ちしております。<br />
-        今後ともよろしくお願いします！
-      </div>
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          {GroupName} チーム
-        </p>
       </div>
     </div>
   </div>
@@ -271,8 +254,8 @@
   >
     <div style="text-align: center; margin-bottom: 16px">
       <img
-        src="{GroupAvatar}"
-        alt="Group Avatar"
+        src="{CommunityAvatar}"
+        alt="Community Avatar"
         style="
           width: 48px;
           height: 48px;
@@ -290,7 +273,7 @@
       "
     >
       このメールは送信専用です。ご返信いただいても対応できませんのでご了承ください。<br />
-      ご不明な点がございましたら、 {GroupName}
+      ご不明な点がございましたら、 {CommunityName}
       のコミュニティオーナーまでお問い合わせください。
     </div>
   </div>

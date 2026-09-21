@@ -24,6 +24,46 @@
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
+    <!-- Community header -->
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="
+        margin-bottom: 24px;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 20px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <tr>
+        <td width="40" valign="middle" style="padding-right: 12px">
+          <img
+            src="{CommunityAvatar}"
+            alt="Group Avatar"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 8px;
+              display: block;
+            "
+          />
+        </td>
+        <td valign="middle">
+          <div
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #1a1a1a;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            "
+          >
+            {CommunityName}
+          </div>
+        </td>
+      </tr>
+    </table>
     <!-- Title -->
     <div
       style="
@@ -41,10 +81,10 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        ご注文確認: {Purchased Item Name}
+        メンバーシップ購入完了：{MembershipName}
       </h2>
     </div>
-    <!-- Email body and gift card -->
+    <!-- Email body and membership card -->
     <div
       style="
         border-radius: 12px;
@@ -60,28 +100,26 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        こんにちは、@{Scalably ID} さん
+        こんにちは、@{ScalablyID} さん
       </div>
       <div
         style="
           font-size: 1rem;
           color: #222;
-          margin-bottom: 16px;
+          margin-bottom: 24px;
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        おめでとうございます！<br />
-        {Group Name} にて {Purchased Membership or Item Name}
-        のご購入が完了しました。<br /><br />
-        こちらがご購入内容です：
+        {CommunityName}での「{MembershipName}」の購入が完了しました。
       </div>
+      <!-- Membership image card -->
       <div
         style="
           background: #fff;
           border-radius: 16px;
           box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
           padding: 0 0 20px 0;
-          margin: 0 auto 0 auto;
+          margin: 0 auto 24px auto;
           max-width: 250px;
           width: 100%;
           border: 1px solid #f0f0f0;
@@ -140,8 +178,8 @@
           "
         >
           <img
-            src="{Membership Photo}"
-            alt="Gift"
+            src="{MembershipImage}"
+            alt="Membership"
             width="250"
             height="250"
             style="
@@ -153,7 +191,6 @@
             "
           />
         </div>
-        <!-- Gift name and group -->
         <div
           style="
             width: 100%;
@@ -171,7 +208,7 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {Membership Name}
+            {MembershipName}
           </div>
           <div
             style="
@@ -181,125 +218,14 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {Group Name}
+            {CommunityName}
           </div>
-        </div>
-        <!-- Divider -->
-        <div
-          style="
-            width: 90%;
-            height: 1px;
-            background: #f0f0f0;
-            margin: 18px auto 12px auto;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        ></div>
-        <!-- Activation and Expiration -->
-        <div
-          style="
-            width: 90%;
-            margin: 0 auto 10px auto;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-            text-align: right;
-          "
-        >
-          <div
-            style="
-              width: 100%;
-              margin-bottom: 6px;
-              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-              overflow: hidden;
-            "
-          >
-            <span
-              style="
-                font-size: 0.75rem;
-                color: #888;
-                font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-                float: left;
-              "
-              >有効化</span
-            >
-            <span
-              style="
-                font-size: 0.75rem;
-                color: #222;
-                font-weight: 500;
-                min-width: 80px;
-                font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-                float: right;
-              "
-              >{Membership Activation}</span
-            >
-          </div>
-          <div
-            style="
-              width: 100%;
-              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-              overflow: hidden;
-            "
-          >
-            <span
-              style="
-                font-size: 0.75rem;
-                color: #888;
-                font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-                float: left;
-              "
-              >有効期限</span
-            >
-            <span
-              style="
-                font-size: 0.75rem;
-                color: #222;
-                font-weight: 500;
-                min-width: 80px;
-                font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-                float: right;
-              "
-              >{Membership Expiration}</span
-            >
-          </div>
-        </div>
-        <!-- Status -->
-        <div
-          style="
-            width: 90%;
-            text-align: right;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          <span
-            style="
-              background: #e9fceb;
-              color: #3cb371;
-              font-size: 0.75rem;
-              font-weight: 600;
-              border-radius: 8px;
-              padding: 4px 18px;
-              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-              display: inline-block;
-            "
-            >Active</span
-          >
         </div>
       </div>
-    </div>
-    <!-- Button -->
-    <div style="width: 100%">
-      <p
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 8px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        🔍 会員情報や特典を確認する：
-      </p>
-      <div style="text-align: center; margin-bottom: 24px">
+      <!-- Buttons -->
+      <div style="text-align: center; margin-bottom: 0">
         <a
-          href="{Invoice Redirect}"
+          href="{LinkRedirect}"
           style="
             display: block;
             width: fit-content;
@@ -309,7 +235,7 @@
             font-size: 1rem;
             padding: 10px 36px;
             border-radius: 8px;
-            margin-top: 16px;
+            margin-top: 0;
             margin-bottom: 0;
             margin-right: auto;
             margin-left: auto;
@@ -320,10 +246,10 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          View Invoice
+          メンバーシップを確認
         </a>
         <a
-          href="{Link Redirect}"
+          href="{InvoiceRedirect}"
           style="
             display: block;
             width: fit-content;
@@ -344,41 +270,8 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          My Membership
+          請求書を確認
         </a>
-      </div>
-      <p
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 8px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        このたびはご購入いただきありがとうございます。
-        新しい特典を存分にお楽しみください！
-      </p>
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          今後ともよろしくお願いします！,
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          {Group Name} チーム
-        </p>
       </div>
     </div>
   </div>
@@ -386,35 +279,22 @@
   <div
     style="
       width: 100%;
-      margin-top: 32px;
+      max-width: 480px;
+      margin: 24px auto 0 auto;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
-    <div style="text-align: center">
-      <img
-        src="{GroupImage}"
-        alt="Group"
-        style="
-          width: 160px;
-          height: 160px;
-          border-radius: 50%;
-          margin-bottom: 8px;
-          margin-top: 32px;
-          display: inline-block;
-        "
-      />
-    </div>
     <div
       style="
         color: #9ca0a8;
         text-align: center;
-        margin-bottom: 2px;
+        font-size: 0.75rem;
         font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
-      このメールは送信専用です。ご返信いただいても対応できませんのでご了承ください。<br />
-      ご不明な点がございましたら、{CommunityName}
-      のコミュニティオーナーまでお問い合わせください。 <br />
+      Powered by Scalably
     </div>
   </div>
 </div>

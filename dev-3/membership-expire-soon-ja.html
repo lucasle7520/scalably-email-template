@@ -6,9 +6,9 @@
 <div
   style="
     padding: 40px 16px;
-    background: url('https://s3.ap-northeast-1.amazonaws.com/test-membership.scalably.com/scalably-membership-svc/development/user/email-bg-4ff71950d8360b7abc38cca5aee40e0e.png')
+    background: url({BackgroundEmailImage})
       center center / cover no-repeat;
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
   "
 >
   <!-- Main card -->
@@ -21,12 +21,55 @@
       max-width: 480px;
       padding: 40px 32px 32px 32px;
       margin-top: 40px;
-      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
+    <!-- Community header -->
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="
+        margin-bottom: 24px;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 20px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <tr>
+        <td width="40" valign="middle" style="padding-right: 12px">
+          <img
+            src="{CommunityAvatar}"
+            alt="Group Avatar"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 8px;
+              display: block;
+            "
+          />
+        </td>
+        <td valign="middle">
+          <div
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #1a1a1a;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            "
+          >
+            {CommunityName}
+          </div>
+        </td>
+      </tr>
+    </table>
     <!-- Title -->
     <div
-      style="width: 100%; font-family: 'Poppins', Arial, Helvetica, sans-serif"
+      style="
+        width: 100%;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
     >
       <h2
         style="
@@ -35,18 +78,18 @@
           color: #1a1a1a;
           margin: 0 0 24px 0;
           text-align: center;
-          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        特典を継続しましょう – Get Your Next Membership!
+        {ExpirationDate}で有効期限が終了します：{MembershipName}
       </h2>
     </div>
-    <!-- Email body and gift card -->
+    <!-- Email body and membership card -->
     <div
       style="
         border-radius: 12px;
         margin-bottom: 24px;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
       <div
@@ -54,47 +97,50 @@
           font-size: 1rem;
           color: #222;
           margin-bottom: 8px;
-          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Hi @{Scalably ID},
+        @{ScalablyID} 様
       </div>
       <div
         style="
           font-size: 1rem;
           color: #222;
           margin-bottom: 16px;
-          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        あなたの現在の {Membership Name} は {Expiration Date} に終了します。<br />
-        しかし、ここであなたの旅が止まる必要はありません。新しい会員プランをご利用いただくことで、次のような特典を引き続きお楽しみいただけます：
-        <ul>
-          <li>会員限定機能への特別アクセス</li>
-
-          <li>リワードや特別オファー</li>
-
-          <li>{Group Name} でのシームレスな体験</li>
-        </ul>
+        {CommunityName}の「{MembershipName}」は、{ExpirationDate}で有効期限が終了します。
       </div>
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 24px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        継続をご希望の場合は、新たにメンバーシップをご購入ください。
+      </div>
+      <!-- Membership image card -->
       <div
         style="
           background: #fff;
           border-radius: 16px;
           box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
           padding: 0 0 20px 0;
-          margin: 0 auto 0 auto;
+          margin: 0 auto 24px auto;
           max-width: 250px;
           width: 100%;
           border: 1px solid #f0f0f0;
-          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           text-align: center;
         "
       >
         <div
           style="
             margin: 16px 0;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             text-align: center;
             white-space: nowrap;
           "
@@ -137,13 +183,13 @@
             width: 100%;
             margin-top: 0;
             margin-bottom: 0;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             text-align: center;
           "
         >
           <img
-            src="{Membership Photo}"
-            alt="Gift"
+            src="{MembershipImage}"
+            alt="Membership"
             width="250"
             height="250"
             style="
@@ -155,12 +201,11 @@
             "
           />
         </div>
-        <!-- Gift name and group -->
         <div
           style="
             width: 100%;
             margin-top: 18px;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             text-align: center;
           "
         >
@@ -170,128 +215,27 @@
               font-weight: 600;
               color: #222;
               margin-bottom: 2px;
-              font-family: 'Poppins', Arial, Helvetica, sans-serif;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {Membership Name}
+            {MembershipName}
           </div>
           <div
             style="
               font-size: 0.75rem;
               color: #888;
               margin-bottom: 0;
-              font-family: 'Poppins', Arial, Helvetica, sans-serif;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {Group Name}
+            {CommunityName}
           </div>
-        </div>
-        <!-- Divider -->
-        <div
-          style="
-            width: 90%;
-            height: 1px;
-            background: #f0f0f0;
-            margin: 18px auto 12px auto;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          "
-        ></div>
-        <!-- Activation and Expiration -->
-        <div
-          style="
-            width: 90%;
-            margin: 0 auto 10px auto;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-            text-align: right;
-          "
-        >
-          <div
-            style="
-              width: 100%;
-              margin-bottom: 6px;
-              font-family: 'Poppins', Arial, Helvetica, sans-serif;
-              overflow: hidden;
-            "
-          >
-            <span
-              style="
-                font-size: 0.75rem;
-                color: #888;
-                font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                float: left;
-              "
-              >有効化</span
-            >
-            <span
-              style="
-                font-size: 0.75rem;
-                color: #222;
-                font-weight: 500;
-                min-width: 80px;
-                font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                float: right;
-              "
-              >{Membership Activation}</span
-            >
-          </div>
-          <div
-            style="
-              width: 100%;
-              font-family: 'Poppins', Arial, Helvetica, sans-serif;
-              overflow: hidden;
-            "
-          >
-            <span
-              style="
-                font-size: 0.75rem;
-                color: #888;
-                font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                float: left;
-              "
-              >有効期限</span
-            >
-            <span
-              style="
-                font-size: 0.75rem;
-                color: #222;
-                font-weight: 500;
-                min-width: 80px;
-                font-family: 'Poppins', Arial, Helvetica, sans-serif;
-                float: right;
-              "
-              >{Membership Expiration}</span
-            >
-          </div>
-        </div>
-        <!-- Status -->
-        <div
-          style="
-            width: 90%;
-            text-align: right;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          "
-        >
-          <span
-            style="
-              background: #e9fceb;
-              color: #3cb371;
-              font-size: 0.75rem;
-              font-weight: 600;
-              border-radius: 8px;
-              padding: 4px 18px;
-              font-family: 'Poppins', Arial, Helvetica, sans-serif;
-              display: inline-block;
-            "
-            >Active</span
-          >
         </div>
       </div>
-    </div>
-    <!-- Button -->
-    <div style="width: 100%">
+      <!-- Button -->
       <div style="text-align: center">
         <a
-          href="{Link Redirect}"
+          href="{LinkRedirect}"
           style="
             display: inline-block;
             background: #36499b;
@@ -306,44 +250,11 @@
             text-decoration: none;
             box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
             transition: background 0.2s;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          Explore New Membership
+          メンバーシップを選ぶ
         </a>
-      </div>
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          "
-        >
-          引き続き {Group Name}
-          の一員としてご参加いただけることを楽しみにしています！
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          "
-        >
-          今後ともよろしくお願いします！,
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          "
-        >
-          {Group Name} チーム
-        </p>
       </div>
     </div>
   </div>
@@ -351,35 +262,22 @@
   <div
     style="
       width: 100%;
-      margin-top: 32px;
-      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      max-width: 480px;
+      margin: 24px auto 0 auto;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
+      font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
-    <div style="text-align: center">
-      <img
-        src="{GroupImage}"
-        alt="Group"
-        style="
-          width: 160px;
-          height: 160px;
-          border-radius: 50%;
-          margin-bottom: 8px;
-          margin-top: 32px;
-          display: inline-block;
-        "
-      />
-    </div>
     <div
       style="
         color: #9ca0a8;
         text-align: center;
-        margin-bottom: 2px;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 0.75rem;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
-      このメールは送信専用です。ご返信いただいても対応できませんのでご了承ください。<br />
-    ご不明な点がございましたら、{CommunityName} のコミュニティオーナーまでお問い合わせください。 <br />
-       
+      Powered by Scalably
     </div>
   </div>
 </div>

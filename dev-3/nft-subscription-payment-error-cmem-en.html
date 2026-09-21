@@ -24,6 +24,46 @@
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
+    <!-- Community header -->
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="
+        margin-bottom: 24px;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 20px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <tr>
+        <td width="40" valign="middle" style="padding-right: 12px">
+          <img
+            src="{CommunityAvatar}"
+            alt="Group Avatar"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 8px;
+              display: block;
+            "
+          />
+        </td>
+        <td valign="middle">
+          <div
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #1a1a1a;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            "
+          >
+            {CommunityName}
+          </div>
+        </td>
+      </tr>
+    </table>
     <!-- Title -->
     <div
       style="
@@ -41,7 +81,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Payment failed for {CardName}
+        Payment unsuccessful: {MembershipName}
       </h2>
     </div>
     <!-- Email body -->
@@ -60,7 +100,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Hi {ScalablyID},
+        Hi @{BuyerScalablyID},
       </div>
       <p
         style="
@@ -70,19 +110,8 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Unfortunately, we couldn’t process your recent payment for {CardName}
-        from {GroupName}.
-      </p>
-      <p
-        style="
-          font-size: 1rem;
-          color: #dc3545;
-          font-weight: 600;
-          margin-bottom: 16px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        Payment Issue: {PaymentReason}
+        We couldn’t process the renewal payment for your {MembershipName}
+        membership with {CommunityName}.
       </p>
       <p
         style="
@@ -92,8 +121,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        To avoid service interruption, please update your payment information or
-        top up your account.
+        Please open your membership details and select “Retry payment.”
       </p>
 
       <!-- ItemsCard -->
@@ -162,7 +190,7 @@
           "
         >
           <img
-            src="{CardImage}"
+            src="{MembershipImage}"
             alt="Card"
             width="250"
             height="250"
@@ -193,7 +221,7 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {CardName}
+            {MembershipName}
           </div>
           <div
             style="
@@ -203,7 +231,7 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {GroupName}
+            {CommunityName}
           </div>
         </div>
         <!-- Divider -->
@@ -231,7 +259,7 @@
       <!-- Button -->
       <div style="text-align: center; margin-top: 32px">
         <a
-          href="{UpdatePaymentLink}"
+          href="{LinkRedirect}"
           style="
             display: inline-block;
             background: #36499b;
@@ -247,42 +275,8 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          Update payment information
+          View membership
         </a>
-      </div>
-
-      <p
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-top: 32px;
-          margin-bottom: 24px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        We look forward to having you continue your subscription.
-      </p>
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          Sincerely,
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          The {GroupName} Team
-        </p>
       </div>
     </div>
   </div>
@@ -290,36 +284,22 @@
   <div
     style="
       width: 100%;
-      margin-top: 32px;
+      max-width: 480px;
+      margin: 24px auto 0 auto;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
-    <div style="text-align: center">
-      <img
-        src="{GroupImage}"
-        alt="Group"
-        style="
-          width: 160px;
-          height: 160px;
-          border-radius: 50%;
-          margin-bottom: 8px;
-          margin-top: 32px;
-          display: inline-block;
-        "
-      />
-    </div>
     <div
       style="
         color: #9ca0a8;
         text-align: center;
-        margin-bottom: 2px;
+        font-size: 0.75rem;
         font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
-      This is a no-reply email. Please note that responses to this message will
-      not be monitored.<br />
-      For any questions, kindly reach out to the Community Owner of {GroupName}.
-      <br />
+      Powered by Scalably
     </div>
   </div>
 </div>

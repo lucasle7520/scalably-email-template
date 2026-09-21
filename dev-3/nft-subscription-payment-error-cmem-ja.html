@@ -24,6 +24,46 @@
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
+    <!-- Community header -->
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="
+        margin-bottom: 24px;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 20px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <tr>
+        <td width="40" valign="middle" style="padding-right: 12px">
+          <img
+            src="{CommunityAvatar}"
+            alt="Group Avatar"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 8px;
+              display: block;
+            "
+          />
+        </td>
+        <td valign="middle">
+          <div
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #1a1a1a;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            "
+          >
+            {CommunityName}
+          </div>
+        </td>
+      </tr>
+    </table>
     <!-- Title -->
     <div
       style="
@@ -41,7 +81,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        {CardName} のお支払いに関するお知らせ
+        お支払いを処理できませんでした：{MembershipName}
       </h2>
     </div>
     <!-- Email body -->
@@ -60,7 +100,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        {ScalablyID} 様
+        @{BuyerScalablyID} 様
       </div>
       <p
         style="
@@ -70,19 +110,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        誠に残念ながら、{GroupName}
-        での「{CardName}」に関する最新のお支払いを処理することができませんでした。
-      </p>
-      <p
-        style="
-          font-size: 1rem;
-          color: #dc3545;
-          font-weight: 600;
-          margin-bottom: 16px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        決済エラーの詳細：{PaymentReason}
+        {CommunityName}の「{MembershipName}」の更新時に、お支払いを処理できませんでした。
       </p>
       <p
         style="
@@ -92,7 +120,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        サービスの停止を避けるため、お支払い情報の更新、またはアカウントへのチャージをお願いいたします。
+        メンバーシップの詳細画面を開き、「支払いを再試行」を選択してください。
       </p>
 
       <!-- ItemsCard -->
@@ -161,7 +189,7 @@
           "
         >
           <img
-            src="{CardImage}"
+            src="{MembershipImage}"
             alt="Card"
             width="250"
             height="250"
@@ -192,7 +220,7 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {CardName}
+            {MembershipName}
           </div>
           <div
             style="
@@ -202,7 +230,7 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {GroupName}
+            {CommunityName}
           </div>
         </div>
         <!-- Divider -->
@@ -230,7 +258,7 @@
       <!-- Button -->
       <div style="text-align: center; margin-top: 32px">
         <a
-          href="{UpdatePaymentLink}"
+          href="{LinkRedirect}"
           style="
             display: inline-block;
             background: #36499b;
@@ -246,42 +274,8 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          Update payment information
+          メンバーシップを確認
         </a>
-      </div>
-
-      <p
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-top: 32px;
-          margin-bottom: 24px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        今後とも引き続きサービスをご利用いただけることを心よりお待ちしております。
-      </p>
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          今後ともよろしくお願いします！
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          {GroupName} チーム
-        </p>
       </div>
     </div>
   </div>
@@ -289,35 +283,22 @@
   <div
     style="
       width: 100%;
-      margin-top: 32px;
+      max-width: 480px;
+      margin: 24px auto 0 auto;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
-    <div style="text-align: center">
-      <img
-        src="{GroupImage}"
-        alt="Group"
-        style="
-          width: 160px;
-          height: 160px;
-          border-radius: 50%;
-          margin-bottom: 8px;
-          margin-top: 32px;
-          display: inline-block;
-        "
-      />
-    </div>
     <div
       style="
         color: #9ca0a8;
         text-align: center;
-        margin-bottom: 2px;
+        font-size: 0.75rem;
         font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
-      このメールは送信専用です。ご返信いただいても対応できませんのでご了承ください。<br />
-      ご不明な点がございましたら、 {GroupName}
-      のコミュニティオーナーまでお問い合わせください。 <br />
+      Powered by Scalably
     </div>
   </div>
 </div>

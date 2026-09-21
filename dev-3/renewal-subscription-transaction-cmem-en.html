@@ -41,7 +41,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Your {ItemName} plan has been renewed
+        Subscription renewed: {ItemName}
       </h2>
     </div>
     <!-- Email body -->
@@ -70,8 +70,18 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        Your subscription is now extended until {NewExpirationDate}, so you can
-        keep enjoying all the services without any interruptions.
+        Your subscription to {ItemName} from {CommunityName} has renewed
+        automatically.
+      </p>
+      <p
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 16px;
+          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+        "
+      >
+        Current subscription period ends: {NewExpirationDate}
       </p>
 
       <!-- ItemsCard -->
@@ -140,8 +150,8 @@
           "
         >
           <img
-            src="{CardPhoto}"
-            alt="Card"
+            src="{ItemImage}"
+            alt="Item"
             width="250"
             height="250"
             style="
@@ -153,7 +163,7 @@
             "
           />
         </div>
-        <!-- Gift name and group -->
+        <!-- Item name and community -->
         <div
           style="
             width: 100%;
@@ -171,9 +181,8 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {CardName}
+            {ItemName}
           </div>
-          <!-- Group Name in Card (optional but in original) -->
           <div
             style="
               font-size: 0.75rem;
@@ -182,7 +191,7 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {GroupName}
+            {CommunityName}
           </div>
         </div>
         <!-- Divider -->
@@ -203,14 +212,14 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          {CardPrice}
+          {UnitPrice}
         </p>
       </div>
 
       <!-- Buttons -->
       <div style="text-align: center; margin-bottom: 16px">
         <a
-          href="{Invoice Redirect}"
+          href="{InvoiceRedirect}"
           style="
             display: block;
             width: fit-content;
@@ -235,7 +244,7 @@
         </a>
 
         <a
-          href="{ItemDetailLink}"
+          href="{SubscriptionHistoryLink}"
           style="
             display: block;
             width: fit-content;
@@ -258,29 +267,6 @@
           My Subscription History
         </a>
       </div>
-
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          Sincerely,
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          The {GroupName} Team
-        </p>
-      </div>
     </div>
   </div>
   <!-- Footer -->
@@ -293,8 +279,8 @@
   >
     <div style="text-align: center">
       <img
-        src="{GroupAvatar}"
-        alt="Group Avatar"
+        src="{CommunityAvatar}"
+        alt="Community Avatar"
         style="
           width: 80px;
           height: 80px;
@@ -316,7 +302,8 @@
     >
       This is a no-reply email. Please note that responses to this message will
       not be monitored.<br />
-      For any questions, kindly reach out to the Community Owner of {GroupName}.
+      For any questions, kindly reach out to the Community Owner of
+      {CommunityName}.
     </div>
   </div>
 </div>

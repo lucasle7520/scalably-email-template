@@ -24,6 +24,46 @@
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
+    <!-- Community header -->
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="
+        margin-bottom: 24px;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 20px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <tr>
+        <td width="40" valign="middle" style="padding-right: 12px">
+          <img
+            src="{CommunityAvatar}"
+            alt="Community Avatar"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 8px;
+              display: block;
+            "
+          />
+        </td>
+        <td valign="middle">
+          <div
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #1a1a1a;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            "
+          >
+            {CommunityName}
+          </div>
+        </td>
+      </tr>
+    </table>
     <!-- Title -->
     <div
       style="
@@ -41,10 +81,10 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        {CardName} のご利用準備が整いました！
+        メンバーシップ定期購入開始：{MembershipName}
       </h2>
     </div>
-    <!-- Email body and gift card -->
+    <!-- Email body and membership card -->
     <div
       style="
         border-radius: 12px;
@@ -60,7 +100,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        {ScalablyID} 様
+        @{BuyerScalablyID} 様
       </div>
       <div
         style="
@@ -70,10 +110,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        おめでとうございます！<br />
-        {GroupName} にて {CardName} のごサブスクリプションが完了しました。
-        <br /><br />
-        サブスクリプションが有効になりました。：
+        {CommunityName}の「{MembershipName}」の定期購入が開始されました。解約するまで自動更新されます。
       </div>
       <div
         style="
@@ -140,8 +177,8 @@
           "
         >
           <img
-            src="{SubscriptionImage}"
-            alt="Subscription"
+            src="{MembershipImage}"
+            alt="Membership"
             width="250"
             height="250"
             style="
@@ -153,7 +190,7 @@
             "
           />
         </div>
-        <!-- Subscription name and group -->
+        <!-- Membership name and community -->
         <div
           style="
             width: 100%;
@@ -171,7 +208,7 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {CardName}
+            {MembershipName}
           </div>
           <div
             style="
@@ -181,26 +218,16 @@
               font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
             "
           >
-            {GroupName}
+            {CommunityName}
           </div>
         </div>
       </div>
     </div>
-    <!-- Button -->
+    <!-- Buttons -->
     <div style="width: 100%">
-      <p
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 8px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        🔍 会員情報や特典を確認する：
-      </p>
       <div style="text-align: center; margin-bottom: 16px">
         <a
-          href="{MySubscriptionLink}"
+          href="{LinkRedirect}"
           style="
             display: block;
             width: fit-content;
@@ -221,10 +248,10 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          My Subscription
+          メンバーシップを確認
         </a>
         <a
-          href="{InvoiceLink}"
+          href="{InvoiceRedirect}"
           style="
             display: block;
             width: fit-content;
@@ -245,40 +272,8 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          View invoice
+          請求書を確認
         </a>
-      </div>
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          ごサブスクリプションいただきありがとうございます。新しい特典をぜひお楽しみください。
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          今後ともよろしくお願いします！
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          {GroupName} チーム
-        </p>
       </div>
     </div>
   </div>
@@ -286,35 +281,22 @@
   <div
     style="
       width: 100%;
-      margin-top: 32px;
+      max-width: 480px;
+      margin: 24px auto 0 auto;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
-    <div style="text-align: center">
-      <img
-        src="{GroupImage}"
-        alt="Group"
-        style="
-          width: 160px;
-          height: 160px;
-          border-radius: 50%;
-          margin-bottom: 8px;
-          margin-top: 32px;
-          display: inline-block;
-        "
-      />
-    </div>
     <div
       style="
         color: #9ca0a8;
         text-align: center;
-        margin-bottom: 2px;
+        font-size: 0.75rem;
         font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
-      このメールは送信専用です。ご返信いただいても対応できませんのでご了承ください。<br />
-      ご不明な点がございましたら、 {GroupName}
-      のコミュニティオーナーまでお問い合わせください。 <br />
+      Powered by Scalably
     </div>
   </div>
 </div>

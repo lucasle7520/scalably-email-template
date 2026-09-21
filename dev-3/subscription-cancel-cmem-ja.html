@@ -41,7 +41,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        サブスクリプション解約完了のお知らせ
+        定期購入の解約受付完了：{ItemName}
       </h2>
     </div>
     <!-- Email body -->
@@ -70,28 +70,23 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        平素より弊社サービスをご利用いただき、誠にありがとうございます。<br /><br />
-        ご依頼いただいておりました {ItemName} のサブスクリプション解約手続きが完了しましたので、お知らせいたします。<br /><br />
-        現在のプランの特典は、下記の有効期限まで引き続きご利用いただけます。<br />
-        有効期限：<strong>{SubscriptionEndDate}</strong>
+        {CommunityName}の「{ItemName}」の定期購入は、次回以降更新されません。
       </p>
-      
       <p
         style="
           font-size: 1rem;
           color: #222;
-          margin-top: 24px;
           margin-bottom: 16px;
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        再開をご希望ですか？ もし継続をご希望の場合は、下記のボタンよりいつでもプランを再開することが可能です。有効期限終了後もスムーズにご利用を継続いただけます。
+        {ExpirationDate}まで引き続き特典をご利用いただけます。
       </p>
 
       <!-- Button -->
       <div style="text-align: center; margin-bottom: 32px">
         <a
-          href="{ResubscriptionLink}"
+          href="{LinkRedirect}"
           style="
             display: block;
             width: fit-content;
@@ -112,31 +107,8 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          Reactivate Subscription
+          定期購入を確認
         </a>
-      </div>
-
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          今後ともよろしくお願いします！
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-          "
-        >
-          {GroupName} チーム
-        </p>
       </div>
     </div>
   </div>
@@ -148,10 +120,10 @@
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
-    <div style="text-align: center; margin-bottom: 16px;">
+    <div style="text-align: center; margin-bottom: 16px">
       <img
-        src="{GroupAvatar}"
-        alt="Group Avatar"
+        src="{CommunityAvatar}"
+        alt="Community Avatar"
         style="
           width: 48px;
           height: 48px;
@@ -169,7 +141,8 @@
       "
     >
       このメールは送信専用です。ご返信いただいても対応できませんのでご了承ください。<br />
-      ご不明な点がございましたら、 {GroupName} のコミュニティオーナーまでお問い合わせください。
+      ご不明な点がございましたら、 {CommunityName}
+      のコミュニティオーナーまでお問い合わせください。
     </div>
   </div>
 </div>
