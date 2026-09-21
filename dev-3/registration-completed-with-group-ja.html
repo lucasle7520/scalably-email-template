@@ -24,6 +24,46 @@
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
+    <!-- Community header -->
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="
+        margin-bottom: 24px;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 20px;
+        font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+      "
+    >
+      <tr>
+        <td width="40" valign="middle" style="padding-right: 12px">
+          <img
+            src="{CommunityAvatar}"
+            alt="Group Avatar"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 8px;
+              display: block;
+            "
+          />
+        </td>
+        <td valign="middle">
+          <div
+            style="
+              font-size: 1rem;
+              font-weight: 600;
+              color: #1a1a1a;
+              font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
+            "
+          >
+            {CommunityName}
+          </div>
+        </td>
+      </tr>
+    </table>
     <!-- Title -->
     <div
       style="
@@ -41,7 +81,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        アカウント登録が完了しました
+        登録完了：{CommunityName}
       </h2>
     </div>
     <!-- Email body -->
@@ -56,41 +96,11 @@
         style="
           font-size: 1rem;
           color: #222;
-          margin-bottom: 16px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        {CommunityName} へようこそ
-      </div>
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 16px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        <span style="opacity: 0.9">@{ScalablyUserId}</span> 様
-      </div>
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 16px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        {CommunityName} への参加が完了しました。
-      </div>
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
           margin-bottom: 24px;
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        これよりログインして、{CommunityName} をお楽しみいただけます。
+        {CommunityName}への登録が完了しました。ログインしてご利用いただけます。
       </div>
       <!-- Button -->
       <div style="text-align: center">
@@ -113,7 +123,7 @@
             font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
           "
         >
-          {CommunityName} を探索する
+          ログイン
         </a>
       </div>
       <div
@@ -125,37 +135,7 @@
           font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
         "
       >
-        最新のお知らせやお役立ち情報、お得なキャンペーン情報をお届けしますので、ぜひSNSでもつながってください！
-      </div>
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 8px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        このアカウントにお心当たりがない場合は、速やかに@{OwnerScalablyUserId}までお問い合わせください。
-      </div>
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 8px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        このメールは自動送信されています。
-      </div>
-      <div
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 24px;
-          font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
-        "
-      >
-        このメールに返信しないでください。
+        この登録にお心当たりがない場合は、下の問い合わせリンクから{CommunityName}へご連絡ください。
       </div>
     </div>
   </div>
@@ -163,32 +143,22 @@
   <div
     style="
       width: 100%;
-      margin-top: 32px;
+      max-width: 480px;
+      margin: 24px auto 0 auto;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
       font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
     "
   >
-    <div style="text-align: center; margin-bottom: 16px">
-      <img
-        src="{CommunityAvatar}"
-        alt="Group Avatar"
-        style="
-          width: 48px;
-          height: 48px;
-          border-radius: 50%;
-          display: inline-block;
-        "
-      />
-    </div>
     <div
       style="
         color: #9ca0a8;
         text-align: center;
-        margin-bottom: 2px;
+        font-size: 0.75rem;
         font-family: &quot;Poppins&quot;, Arial, Helvetica, sans-serif;
       "
     >
-      このメールは送信専用です。ご返信いただいても対応できませんのでご了承ください。<br />
-      ご不明な点がございましたら、 {CommunityName}のコミュニティオーナーまでお問い合わせください。
+      Powered by Scalably
     </div>
   </div>
 </div>
