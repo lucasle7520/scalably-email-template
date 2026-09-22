@@ -63,7 +63,7 @@
           text-align: center;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        Shipped: {ItemName}
+        Shipped: {ItemName}-({OrderID})
       </h2>
     </div>
     <!-- Email body -->
@@ -77,10 +77,19 @@
         style="
           font-size: 1rem;
           color: #222;
+          margin-bottom: 8px;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        ">
+        Dear {BuyerDisplayName} (@{ScalablyID}),
+      </div>
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
           margin-bottom: 16px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        Your order of {ItemName} from {CommunityName} has been shipped.
+        Your {ItemName} from {CommunityName} has been shipped.
       </div>
       <!-- Item image -->
       <div style="text-align: center; margin-bottom: 24px">
@@ -98,6 +107,25 @@
             display: inline-block;
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
           " />
+      </div>
+      <div
+        style="
+          font-size: 1rem;
+          font-weight: 600;
+          color: #222;
+          margin-bottom: 8px;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        ">
+        Shipping Status: Shipped
+      </div>
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 24px;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        ">
+        Your order is now on its way. You can check the latest shipping details below.
       </div>
       <!-- Button -->
       <div style="text-align: center">
@@ -119,9 +147,31 @@
             transition: background 0.2s;
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
           ">
-          View shipping details
+          View Item
         </a>
       </div>
+    </div>
+    <!-- In-card footer -->
+    <div
+      style="
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #e5e7eb;
+        font-size: 0.875rem;
+        color: #666;
+        text-align: center;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      ">
+      You can change your display name and Scalably ID anytime in your profile.
+      <a
+        href="{ProfileRedirect}"
+        style="
+          color: #36499b;
+          text-decoration: underline;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        "
+        >Update my profile</a
+      >
     </div>
   </div>
   <!-- Footer -->

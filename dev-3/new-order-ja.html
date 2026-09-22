@@ -63,7 +63,7 @@
           text-align: center;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        新規注文商品!
+        新規注文：{ItemName}-({OrderID})
       </h2>
     </div>
     <!-- Email body -->
@@ -77,10 +77,10 @@
         style="
           font-size: 1rem;
           color: #222;
-          margin-bottom: 16px;
+          margin-bottom: 8px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        @{ScalablyID}様,
+        {DisplayName} (@{ScalablyID}) 様
       </div>
       <div
         style="
@@ -89,7 +89,43 @@
           margin-bottom: 24px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        素晴らしいニュースです！ {ItemName} の新規注文が入りました。
+        {GroupName}で「{ItemName}」の新規注文が入りました。
+      </div>
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 8px;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        ">
+        注文番号：{OrderID}
+      </div>
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 8px;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        ">
+        購入者：{BuyerDisplayName} (@{CustomerScalablyID})
+      </div>
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 8px;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        ">
+        数量：{ItemQuantity}
+      </div>
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 8px;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        ">
+        合計金額：{TotalAmount} JPY
       </div>
       <div
         style="
@@ -98,189 +134,79 @@
           margin-bottom: 24px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        ご注文概要:
+        注文日時：{OrderDate}
+      </div>
+      <!-- Item image -->
+      <div style="text-align: center; margin-bottom: 24px">
+        <img
+          src="{ItemImage}"
+          alt="{ItemName}"
+          width="250"
+          height="250"
+          style="
+            width: 100%;
+            max-width: 250px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 12px;
+            display: inline-block;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          " />
       </div>
       <div
-        style="
-          width: 100%;
-          border-radius: 12px;
-          background: #fff;
-          box-shadow: 0 2px 14px rgba(20, 20, 43, 0.04);
-          margin-bottom: 32px;
-          font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          font-size: 1rem;
-        ">
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            ">
-            注文ID
-          </div>
-          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">{OrderID}</div>
-        </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fff">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            ">
-            グループ
-          </div>
-          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">
-            {GroupName}
-          </div>
-        </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            ">
-            お客様
-          </div>
-          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">
-            @{CustomerScalablyID}
-          </div>
-        </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fff">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            ">
-            合計金額
-          </div>
-          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">
-            {TotalAmount} JPY
-          </div>
-        </div>
-        <div style="display: flex">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            ">
-            注文日時
-          </div>
-          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">
-            {OrderDate}
-          </div>
-        </div>
-      </div>
-      <p
         style="
           font-size: 1rem;
           color: #222;
           margin-bottom: 24px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        👉 注文内容を確認し、発送準備へ
-      </p>
+        商品の発送準備をお願いします。
+      </div>
       <!-- Button -->
-      <div style="text-align: center; margin-bottom: 16px">
+      <div style="text-align: center">
         <a
           href="{Link Redirect}"
           style="
-            display: block;
-            width: fit-content;
+            display: inline-block;
             background: #36499b;
             color: #fff;
             font-weight: 600;
             font-size: 1rem;
             padding: 10px 36px;
             border-radius: 8px;
-            margin-top: 16px;
+            margin-top: 0;
             margin-bottom: 0;
-            margin-right: auto;
-            margin-left: auto;
             text-align: center;
             text-decoration: none;
             box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
             transition: background 0.2s;
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
           ">
-          View Order
-        </a>
-        <a
-          href="{Invoice Redirect}"
-          style="
-            display: block;
-            width: fit-content;
-            border: 1px solid #36499b;
-            color: #36499b;
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 10px 36px;
-            border-radius: 8px;
-            margin-top: 16px;
-            margin-bottom: 0;
-            margin-right: auto;
-            margin-left: auto;
-            text-align: center;
-            text-decoration: none;
-            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
-            transition: background 0.2s;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          ">
-          Receipt
+          注文を確認
         </a>
       </div>
-      <div
+    </div>
+    <!-- In-card footer -->
+    <div
+      style="
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #e5e7eb;
+        font-size: 0.875rem;
+        color: #666;
+        text-align: center;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      ">
+      表示名とScalably IDは、プロフィールからいつでも変更できます。
+      <a
+        href="{ProfileRedirect}"
         style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 24px;
+          color: #36499b;
+          text-decoration: underline;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        ">
-        販売頑張ってください！
-      </div>
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          ">
-          今後ともよろしくお願いします！
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          ">
-          {GroupName}チーム
-        </p>
-      </div>
+        "
+        >プロフィールを設定</a
+      >
     </div>
   </div>
   <!-- Footer -->

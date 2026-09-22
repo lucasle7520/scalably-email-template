@@ -63,7 +63,7 @@
           text-align: center;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        注文キャンセル：{ItemName}
+        注文キャンセル：{ItemName}-({OrderID})
       </h2>
     </div>
     <!-- Email body -->
@@ -80,7 +80,7 @@
           margin-bottom: 16px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        @{BuyerScalablyID} 様
+        {BuyerDisplayName} (@{BuyerScalablyID}) 様
       </div>
       <div
         style="
@@ -118,97 +118,6 @@
         ">
         キャンセル理由：{CancellationReason}
       </div>
-      <!-- Item image card -->
-      <div
-        style="
-          background: #fff;
-          border-radius: 16px;
-          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-          padding: 0 0 20px 0;
-          margin: 0 auto 24px auto;
-          max-width: 250px;
-          width: 100%;
-          border: 1px solid #f0f0f0;
-          font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          text-align: center;
-        ">
-        <div
-          style="
-            margin: 16px 0;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-            text-align: center;
-            white-space: nowrap;
-          ">
-          <span
-            style="
-              display: inline-block;
-              vertical-align: middle;
-              width: 16px;
-              height: 16px;
-              border-radius: 50%;
-              background-color: #e6e8ec;
-              margin-right: 8px;
-            "></span>
-          <span
-            style="
-              display: inline-block;
-              vertical-align: middle;
-              width: 120px;
-              height: 16px;
-              border-radius: 32px;
-              background-color: #e6e8ec;
-              margin-right: 8px;
-            "></span>
-          <span
-            style="
-              display: inline-block;
-              vertical-align: middle;
-              width: 16px;
-              height: 16px;
-              border-radius: 50%;
-              background-color: #e6e8ec;
-            "></span>
-        </div>
-        <div
-          style="
-            width: 100%;
-            margin-top: 0;
-            margin-bottom: 0;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-            text-align: center;
-          ">
-          <img
-            src="{ItemImage}"
-            alt="Item"
-            width="250"
-            height="250"
-            style="
-              width: 100%;
-              aspect-ratio: 1 / 1;
-              object-fit: cover;
-              font-family: 'Poppins', Arial, Helvetica, sans-serif;
-              display: inline-block;
-            " />
-        </div>
-        <div
-          style="
-            width: 100%;
-            margin-top: 18px;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-            text-align: center;
-          ">
-          <div
-            style="
-              font-size: 1.08rem;
-              font-weight: 600;
-              color: #222;
-              margin-bottom: 0;
-              font-family: 'Poppins', Arial, Helvetica, sans-serif;
-            ">
-            {ItemName}
-          </div>
-        </div>
-      </div>
       <div
         style="
           font-size: 1rem;
@@ -241,6 +150,28 @@
           注文を確認
         </a>
       </div>
+    </div>
+    <!-- In-card footer -->
+    <div
+      style="
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #e5e7eb;
+        font-size: 0.875rem;
+        color: #666;
+        text-align: center;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      ">
+      表示名とScalably IDは、プロフィールからいつでも変更できます。
+      <a
+        href="{ProfileRedirect}"
+        style="
+          color: #36499b;
+          text-decoration: underline;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        "
+        >プロフィールを設定</a
+      >
     </div>
   </div>
   <!-- Footer -->

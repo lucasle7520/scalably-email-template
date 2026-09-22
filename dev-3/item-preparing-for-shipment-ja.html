@@ -63,7 +63,7 @@
           text-align: center;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        発送準備中：{ItemName}
+        発送準備中：{ItemName}-({OrderID})
       </h2>
     </div>
     <!-- Email body -->
@@ -77,10 +77,19 @@
         style="
           font-size: 1rem;
           color: #222;
+          margin-bottom: 8px;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        ">
+        {BuyerDisplayName} (@{ScalablyID}) 様
+      </div>
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
           margin-bottom: 16px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        {CommunityName}でご購入いただいた「{ItemName}」の発送準備を進めています。発送が完了しましたら、お知らせします。
+        {CommunityName} の {ItemName} の発送準備をしています。
       </div>
       <!-- Item image -->
       <div style="text-align: center; margin-bottom: 24px">
@@ -98,6 +107,26 @@
             display: inline-block;
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
           " />
+      </div>
+      <div
+        style="
+          font-size: 1rem;
+          font-weight: 600;
+          color: #222;
+          margin-bottom: 8px;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        ">
+        配送状況：発送準備中
+      </div>
+      <div
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 24px;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        ">
+        現在、ご注文の商品を発送するための準備を進めています。<br />
+        発送が完了しましたら、改めてお知らせします。
       </div>
       <!-- Button -->
       <div style="text-align: center">
@@ -119,9 +148,31 @@
             transition: background 0.2s;
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
           ">
-          商品を確認
+          商品を見る
         </a>
       </div>
+    </div>
+    <!-- In-card footer -->
+    <div
+      style="
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #e5e7eb;
+        font-size: 0.875rem;
+        color: #666;
+        text-align: center;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      ">
+      表示名とScalably IDは、プロフィールからいつでも変更できます。
+      <a
+        href="{ProfileRedirect}"
+        style="
+          color: #36499b;
+          text-decoration: underline;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        "
+        >プロフィールを設定</a
+      >
     </div>
   </div>
   <!-- Footer -->
