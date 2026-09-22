@@ -63,7 +63,7 @@
           text-align: center;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        購入完了：{ItemName}
+        購入完了：{ItemName}-({OrderID})
       </h2>
     </div>
     <!-- Email body and gift card -->
@@ -80,7 +80,7 @@
           margin-bottom: 8px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        @{BuyerScalablyID} 様
+        {BuyerDisplayName} (@{BuyerScalablyID}) 様
       </div>
       <div
         style="
@@ -239,9 +239,31 @@
             transition: background 0.2s;
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
           ">
-          受取書を確認
+          領収書を確認
         </a>
       </div>
+    </div>
+    <!-- In-card footer -->
+    <div
+      style="
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #e5e7eb;
+        font-size: 0.875rem;
+        color: #666;
+        text-align: center;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      ">
+      表示名とScalably IDは、プロフィールからいつでも変更できます。
+      <a
+        href="{ProfileRedirect}"
+        style="
+          color: #36499b;
+          text-decoration: underline;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        "
+        >プロフィールを設定</a
+      >
     </div>
   </div>
   <!-- Footer -->

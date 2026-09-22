@@ -63,7 +63,7 @@
           text-align: center;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        Purchase confirmed: {ItemName}
+        Purchase confirmed: {ItemName}-({OrderID})
       </h2>
     </div>
     <!-- Email body and gift card -->
@@ -80,7 +80,7 @@
           margin-bottom: 8px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        Dear @{BuyerScalablyID},
+        Dear {BuyerDisplayName} (@{BuyerScalablyID}),
       </div>
       <div
         style="
@@ -98,7 +98,7 @@
           margin-bottom: 16px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        Your subscription is now active:
+        Order ID: {OrderID}
       </div>
       <div
         style="
@@ -248,9 +248,31 @@
             transition: background 0.2s;
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
           ">
-          View receipt
+          View Receipt
         </a>
       </div>
+    </div>
+    <!-- In-card footer -->
+    <div
+      style="
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #e5e7eb;
+        font-size: 0.875rem;
+        color: #666;
+        text-align: center;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      ">
+      You can change your display name and Scalably ID anytime in your profile.
+      <a
+        href="{ProfileRedirect}"
+        style="
+          color: #36499b;
+          text-decoration: underline;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        "
+        >Update my profile</a
+      >
     </div>
   </div>
   <!-- Footer -->
