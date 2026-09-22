@@ -5,7 +5,7 @@
 <div
   style="
     padding: 40px 16px;
-    background: url({BackgroundEmailImage}) center center / cover no-repeat;
+    background: url('{BackgroundEmailImage}') center center / cover no-repeat;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
   ">
   <!-- Main card -->
@@ -31,7 +31,7 @@
           text-align: center;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        New Item Purchase Completed on Scalably!
+        Successful Transaction on Scalably 🎉
       </h2>
     </div>
     <!-- Email body -->
@@ -50,26 +50,16 @@
         ">
         Dear @{ScalablyID},
       </div>
-      <p
-        style="
-          font-size: 1rem;
-          color: #222;
-          margin-bottom: 16px;
-          font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        ">
-        Great news!<br />
-        An item has just been successfully purchased on the Scalably platform.
-      </p>
-      <p
+      <div
         style="
           font-size: 1rem;
           color: #222;
           margin-bottom: 24px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        You can find the transaction details below. If you have any questions or need support, we’re
-        always here to help.
-      </p>
+        We’re pleased to inform you that a new transaction on the Scalably platform has been
+        successfully completed.
+      </div>
       <div
         style="
           font-size: 1rem;
@@ -89,7 +79,7 @@
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
           font-size: 1rem;
         ">
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fff">
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fbfbfc">
           <div
             style="
               width: 50%;
@@ -123,7 +113,7 @@
             {OrderDate}
           </div>
         </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fff">
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fbfbfc">
           <div
             style="
               width: 50%;
@@ -156,7 +146,7 @@
             @{BuyerScalablyID}
           </div>
         </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fff">
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fbfbfc">
           <div
             style="
               width: 50%;
@@ -190,8 +180,24 @@
             {TaxAmount} JPY
           </div>
         </div>
-        {ShippingFee}
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fff">
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fbfbfc">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            ">
+            Discount
+          </div>
+          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">
+            {DiscountAmount} JPY
+          </div>
+        </div>
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
           <div
             style="
               width: 50%;
@@ -206,6 +212,40 @@
           </div>
           <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">
             {TotalAmount} JPY
+          </div>
+        </div>
+        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fbfbfc">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            ">
+            Platform Fee
+          </div>
+          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">
+            {PlatformFee} JPY
+          </div>
+        </div>
+        <div style="display: flex; background: #fbfbfc">
+          <div
+            style="
+              width: 50%;
+              padding: 12px 16px;
+              color: #9ca0a8;
+              font-size: 0.83rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 0.04em;
+            ">
+            Receive Amount
+          </div>
+          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">
+            {ReceiveAmount} JPY
           </div>
         </div>
       </div>
@@ -270,11 +310,10 @@
           <img
             src="{CardPhoto}"
             alt="Card"
-            width="250"
-            height="250"
             style="
               width: 100%;
-              aspect-ratio: 1 / 1;
+              max-width: 320px;
+              height: 180px;
               object-fit: cover;
               font-family: 'Poppins', Arial, Helvetica, sans-serif;
               display: inline-block;
@@ -327,16 +366,50 @@
           {CardPrice}
         </p>
       </div>
+      <p
+        style="
+          font-size: 1rem;
+          color: #222;
+          margin-bottom: 24px;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        ">
+        You can review the order's receipt here:
+      </p>
+      <!-- Button -->
+      <div style="text-align: center; margin-bottom: 16px">
+        <a
+          href="{Invoice Redirect}"
+          style="
+            display: block;
+            width: fit-content;
+            background: #36499b;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 10px 36px;
+            border-radius: 8px;
+            margin-top: 16px;
+            margin-bottom: 0;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
+            transition: background 0.2s;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+          ">
+          Receipt
+        </a>
+      </div>
       <div
         style="
           font-size: 1rem;
           color: #222;
-          margin-top: 24px;
           margin-bottom: 24px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        Thanks for growing your community and business with Scalably — we’re excited to be part of
-        your journey!
+        Thank you for using Scalably. We appreciate your continued trust and look forward to
+        supporting your business growth
       </div>
       <div>
         <p
@@ -346,7 +419,7 @@
             margin-bottom: 8px;
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
           ">
-          Warm regards,
+          Sincerely,
         </p>
         <p
           style="
@@ -355,7 +428,7 @@
             margin-bottom: 8px;
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
           ">
-          The Scalably Team
+          The Scalably Admin Team
         </p>
       </div>
     </div>
