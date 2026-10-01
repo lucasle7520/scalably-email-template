@@ -63,7 +63,7 @@
           text-align: center;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        @{BuyerScalablyID} 様のサブスクリプション解約通知
+        定期購入の解約：{ItemName}-({OrderID})
       </h2>
     </div>
     <!-- Email body -->
@@ -77,185 +77,86 @@
         style="
           font-size: 1rem;
           color: #222;
-          margin-bottom: 16px;
+          margin-bottom: 8px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        @{ScalablyID} 様
+        「{DisplayName} (@{ScalablyID})」様
       </div>
-      <p
+      <div
         style="
           font-size: 1rem;
           color: #222;
           margin-bottom: 24px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        本メールは、@{BuyerScalablyID} 様が {ItemName}
-        のサブスクリプションを解約されたことをお知らせする自動通知です。
-      </p>
-
+        {BuyerDisplayName} (@{BuyerScalablyID}) 様が{GroupName}の「{ItemName}」の定期購入を解約しました。
+      </div>
       <div
         style="
           font-size: 1rem;
           color: #222;
-          margin-bottom: 12px;
-          font-weight: 600;
+          margin-bottom: 8px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        サブスクリプション解約詳細：
+        注文番号：{OrderID}
       </div>
       <div
         style="
-          width: 100%;
-          border-radius: 12px;
-          background: #fff;
-          box-shadow: 0 2px 14px rgba(20, 20, 43, 0.04);
-          margin-bottom: 32px;
-          font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          font-size: 1rem;
-        ">
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fff">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            ">
-            グループ名
-          </div>
-          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">
-            {GroupName}
-          </div>
-        </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            ">
-            メンバー
-          </div>
-          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">
-            @{BuyerScalablyID}
-          </div>
-        </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed; background: #fff">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            ">
-            アイテム
-          </div>
-          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">
-            {ItemName}
-          </div>
-        </div>
-        <div style="display: flex; border-bottom: 1px solid #e6e8ed">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            ">
-            オーダーID
-          </div>
-          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">{OrderID}</div>
-        </div>
-        <div style="display: flex; background: #fff">
-          <div
-            style="
-              width: 50%;
-              padding: 12px 16px;
-              color: #9ca0a8;
-              font-size: 0.83rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.04em;
-            ">
-            ご利用終了日
-          </div>
-          <div style="width: 50%; padding: 12px 16px; color: #222; font-weight: 500">
-            {SubscriptionEndDate}
-          </div>
-        </div>
-      </div>
-
-      <p
-        style="
           font-size: 1rem;
           color: #222;
-          margin-bottom: 16px;
+          margin-bottom: 24px;
           font-family: 'Poppins', Arial, Helvetica, sans-serif;
         ">
-        メンバーのご利用期限が切れる前に、フィードバックの収集や他の特別なアイテムのご提案など、直接コンタクトを取ることをご検討ください。<br /><br />
-        アイテムのサブスクリプション確認・管理はこちらから
-      </p>
+        利用終了日：{SubscriptionEndDate}
+      </div>
 
       <!-- Button -->
-      <div style="text-align: center; margin-bottom: 24px">
+      <div style="text-align: center">
         <a
           href="{ViewDetailsLink}"
           style="
-            display: block;
-            width: fit-content;
+            display: inline-block;
             background: #36499b;
             color: #fff;
             font-weight: 600;
             font-size: 1rem;
             padding: 10px 36px;
             border-radius: 8px;
-            margin-top: 16px;
+            margin-top: 0;
             margin-bottom: 0;
-            margin-right: auto;
-            margin-left: auto;
             text-align: center;
             text-decoration: none;
             box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
             transition: background 0.2s;
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
           ">
-          View Details
+          定期購入を確認
         </a>
       </div>
-
-      <div>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          ">
-          今後ともよろしくお願いします！
-        </p>
-        <p
-          style="
-            font-size: 1rem;
-            color: #222;
-            margin-bottom: 8px;
-            font-family: 'Poppins', Arial, Helvetica, sans-serif;
-          ">
-          {GroupName} チーム
-        </p>
-      </div>
+    </div>
+    <!-- In-card footer -->
+    <div
+      style="
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px solid #e5e7eb;
+        font-size: 12px;
+        color: #666;
+        text-align: center;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      ">
+      表示名とScalably IDは、<br />プロフィールからいつでも変更できます。
+      <a
+        href="{ProfileRedirect}"
+        style="
+          display: block;
+          margin-top: 8px;
+          color: #36499b;
+          text-decoration: underline;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        "
+        >プロフィールを設定</a
+      >
     </div>
   </div>
   <!-- Footer -->
@@ -275,7 +176,17 @@
         font-size: 12px;
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
       ">
-      Powered by Scalably
+      このメールは送信専用です。ご不明な点は
+      <a
+        href="mailto:support@scalably.com"
+        style="
+          color: #9ca0a8;
+          text-decoration: underline;
+          font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        "
+        >support@scalably.com</a
+      >
+      までお問い合わせください。
     </div>
   </div>
 </div>
